@@ -1,0 +1,259 @@
+
+*{
+   box-sizing: border-box;
+}
+
+.block{
+   max-width: 1210px;
+   width: 100%;
+   margin: 0px auto;
+   margin-top: 120px;
+   margin-bottom: 120px;
+}
+
+.block__title{
+   font-family: 'Delius Unicase',sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 36px;
+   line-height: 45px;
+   text-align: center;
+   letter-spacing: 0.05em;
+   color: #000;
+   margin-bottom: 80px;
+}
+
+.gallery-architecture{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(3, 370px);
+   grid-template-areas: "pic1 pic2 pic2"
+   "pic3 pic3 pic4"
+   "pic5 pic6 pic6";
+   grid-gap: 30px;
+   padding: 0 20px;
+}
+
+.gallery__item{
+   position: relative;
+}
+
+.gallery__item::after{
+   position: absolute;
+   content: "";
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+   border-radius: 20px;
+   transition: .3s all;
+}
+
+.gallery__item:hover::after{
+   opacity: 0;
+}
+
+.gallery-architecture-icons{
+   max-width: 770px;
+   width: 100%;
+   height: 80px;
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   opacity: 0;
+   transition: .3s all;
+}
+
+.gallery__item:hover .gallery-architecture-icons {
+   opacity: 1;
+}
+
+
+.gallery-architecture-icon--1{
+   width: 40px;
+   height: 40px;
+   background: #E0E0E0;
+   opacity: 0.5;
+   margin: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   z-index: 1;
+}
+
+.gallery-architecture-icon--1:hover{
+   opacity: 1;
+}
+
+.gallery-architecture-icon--2{
+   width: 40px;
+   height: 40px;
+   background: #E0E0E0;
+   opacity: 0.5;
+   margin: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   z-index: 1;
+}
+
+.gallery-architecture-icon--2:hover{
+   opacity: 1;
+}
+
+
+.gallery-architecture__item--arch1{
+   grid-area: pic1;
+}
+
+.gallery-architecture__item--arch2{
+   grid-area: pic2;
+}
+
+.gallery-architecture__item--arch3{
+   grid-area: pic3;
+}
+
+.gallery-architecture__item--arch4{
+   grid-area: pic4;
+}
+
+.gallery-architecture__item--arch5{
+   grid-area: pic5;
+}
+
+.gallery-architecture__item--arch6{
+   grid-area: pic6;
+}
+
+.gallery__img{
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+}
+
+.gallery__description{
+   font-family: 'Roboto',sans-serif;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   z-index: 1;
+}
+
+.gallery__description--name{
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 23px;
+   color: white;
+   
+}
+
+.gallery__description--date{
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 23px;
+   color: #E0E0E0;
+
+}
+
+
+.gallery-life{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: 370px 770px 370px;
+   grid-gap: 30px;
+   padding: 0 20px;
+}
+
+
+.gallery-life__item--1{
+   grid-column-start: 1;
+   grid-column-end: 2;
+}
+
+.gallery-life__item--2{
+   grid-column-start: 2;
+   grid-column-end: 4;
+}
+
+.gallery-life__item--3{
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
+
+.gallery-life__item--4{
+   grid-column-start: 3;
+   grid-column-end: 4;
+}
+
+.gallery-life__item--5{
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
+
+.gallery-life__item--6{
+   grid-column-start: 3;
+   grid-column-end: 4;
+}
+
+.gallery-fashion{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(5, 1fr);
+   grid-gap: 30px;
+   padding: 0 20px;
+   grid-template-areas: "fashion1 fashion2 fashion3"
+   "fashion4 fashion2 fashion5"
+   "fashion6 fashion7 fashion5"
+   "fashion6 fashion8 fashion8"
+   "fashion9 fashion9 fashion10";
+}
+
+.gallery-fashion__item--1{
+   grid-area: fashion1;
+}
+
+.gallery-fashion__item--2{
+   grid-area: fashion2;
+}
+
+.gallery-fashion__item--3{
+   grid-area: fashion3;
+}
+
+.gallery-fashion__item--4{
+   grid-area: fashion4;
+}
+
+.gallery-fashion__item--5{
+   grid-area: fashion5;
+}
+
+.gallery-fashion__item--6{
+   grid-area: fashion6;
+}
+
+.gallery-fashion__item--7{
+   grid-area: fashion7;
+}
+
+.gallery-fashion__item--8{
+   grid-area: fashion8;
+}
+
+.gallery-fashion__item--9{
+   grid-area: fashion9;
+}
+
+.gallery-fashion__item--10{
+   grid-area: fashion10;
+}
